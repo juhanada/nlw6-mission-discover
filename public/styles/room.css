@@ -1,0 +1,218 @@
+.content{
+    max-width: 85%;
+}
+
+#room main{
+    width: 100%;
+}
+
+#room header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#room header .buttons{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+#room header .buttons .button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+#room header .buttons .button:nth-child(1){
+    margin-right: .8rem;
+    padding-top: 1.3rem ;
+    padding-bottom: 1.3rem; 
+    padding-left: 1.6rem;
+}
+
+#room header .buttons .button:nth-child(1) img{
+    margin-left: .8rem;  
+    width: 2rem;
+    height: 2rem;
+}
+
+#room header .buttons .button:nth-child(2){
+    padding: 1.3rem 3.2rem;
+    margin-right: .8rem;
+}
+
+#room header .buttons .button:nth-child(2) img{ 
+    width: 2rem;
+    height: 2rem;
+}
+
+#question-form h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+    line-height: 4.2rem;
+    font-weight: 700;
+}
+
+#question-form form{
+    padding: 1.6rem;
+    border: .2rem solid var(--grey-blue);
+    border-radius: 0 .8rem .8rem .8rem;
+    margin-bottom: 1.6rem;
+}
+
+#question-form form textarea{
+    resize: none;
+    background: none;
+    width: 100%;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+#question-form form textarea::placeholder{
+    color: var(--grey-blue)
+}
+
+#question-form form footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+/* > para pegar so as divs filhas, e nao netas*/
+#question-form form footer > div{
+    display: flex;
+    align-items: center;
+
+    color: var(--details);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+#question-form form footer button{
+    padding: .8rem 2.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+#question-form form div > img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: .6rem;
+}
+
+#questions a{
+    margin-right: .8rem;
+    display: flex;
+    align-items: center;
+}
+
+#questions p{
+    margin-right: .8rem;
+    display: flex;
+    align-items: center;
+}
+
+#questions a:nth-child(2){
+    margin-left: 1.4rem;
+}
+
+#questions .actions img{
+    margin-right: .8rem;
+}
+
+#questions .question-wrapper{
+    background-color: var(--light-blue);
+    border-radius: 0 .8rem .8rem .8rem;
+    padding: 2.4rem;
+    margin-bottom: .8rem;
+}
+
+#questions .question{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--black)
+}
+
+#questions .question-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+#questions .question-content p{
+    word-break: break-word;
+    display: flex;
+    align-items: center; 
+    min-height: 5.5rem;   
+}
+
+#questions .user{
+    margin-right: 1.6rem;
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+#questions .actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--grey-dark);
+}
+
+#questions .question-wrapper.read{
+    background: var(--grey-medium);
+}
+
+#questions .question-wrapper.read .user{
+    background: var(--grey-blue);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.noquestions{
+    text-align: center;
+    justify-content: center;
+    margin-top: 5.2rem;
+}
+
+.noquestions img{
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.noquestions p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 35%;
+}
+
+.noquestions p + p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 1.3rem;
+    line-height: 2rem;
+    text-align: center;
+}
