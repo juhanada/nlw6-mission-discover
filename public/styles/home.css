@@ -94,3 +94,11 @@ input, button, .button {
     bottom: -15rem;
     right: 5.6rem;    
 }
+
+.container p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--red);
+}

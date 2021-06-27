@@ -12,7 +12,6 @@ const modalButton = document.querySelector('.modal button')
 const modalTitle = document.querySelector('.modal h2') 
 const modalDescription = document.querySelector('.modal p')
 
-
 // adicionar event listener no delete
 // nao entendi event event rs
 deleteButtons.forEach(button => { 
@@ -38,9 +37,9 @@ function handleClick(event, check = true){
     
     const form = document.querySelector('.modal form')
 
-    console.log(form.dataset.id)
+    // console.log(form.dataset.id)
     form.setAttribute("action", `/question/${room}/${question}/${action}`)
-    console.log(form.action)
+    // console.log(form.action)
 
     modalTitle.innerHTML = check ? 'Marcar como lida' : 'Excluir essa pergunta'
     modalDescription.innerHTML = check ? 'Deseja realmente marcar essa pergunta como lida?' : 'Deseja realmente excluir essa pergunta?'
@@ -52,4 +51,12 @@ function handleClick(event, check = true){
         modalButton.classList.add('red')
 
     modal.open()
+}
+
+function copyToClipboard(){
+    console.log("copiar")
+    var copyText = document.querySelector("#room-id").dataset.id
+    // copyText.select()
+    document.execCommand("copy")
+    alert("Copiado para área de trabalho")
 }

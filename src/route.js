@@ -9,8 +9,8 @@ const roomControler = require('./controllers/RoomController')
 
 // definindo as rotas
 //     get home
-route.get('/', (req, res) => res.render("index", {page: 'enter-room'})) //funciona com .ejs (nao precisa por extensao) 
-route.get('/create-pass', (req,res) => res.render('index', {page: 'create-pass'}))
+route.get('/', (req, res) => res.render("index", {page: 'enter-room', mensagem: false})) //funciona com .ejs (nao precisa por extensao) 
+route.get('/create-pass', (req,res) => res.render('index', {page: 'create-pass', mensagem: false}))
 
 route.post('/create-room', roomControler.create)
 route.get('/room/:room', roomControler.open)

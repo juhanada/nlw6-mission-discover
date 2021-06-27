@@ -12,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
     
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,10 +35,27 @@
         </div>
        
         <main>
-            <div class="container">           
+            <div class="container">
+                <% if (mensagem) { %>
+                    <%- include('parts/no-room') %>
+                <% } %>                        
                 <%- include(`parts/${page}`) %>
             </div>
         </main>
+
+        <!--  MODAL  -->
+
+        <div class="modal-wrapper">
+            <div class="modal">
+                
+                <h2>Sala não existe</h2>
+                <p>Digite o código de uma sala existente</p>
+
+                <div class="buttons">
+                    <div class="button dismiss">OK</div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </body>

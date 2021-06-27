@@ -57,8 +57,24 @@ module.exports = {
         res.render("room", {roomId: roomId, questions: questions, questionsRead: questionsRead, isQuestions: isQuestions})
     },
 
-    enter(req, res) {
+    async enter(req, res) {
+
         const roomId = req.body.roomId
-        res.redirect(`/room/${roomId}`)
+        
+        const db = await Database()
+
+        const sala = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`)
+
+        if (sala){
+            console.log("tem sala")
+            res.redirect(`/room/${roomId}`)
+        }
+        else{
+            console.log("nao tem sala")
+            res.render("index", {page: 'enter-room', mensagem: true})
+        }
+
+        await db.close()
+
     }
 }

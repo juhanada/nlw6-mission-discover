@@ -10,8 +10,8 @@ module.exports = {
 
         const pass = req.body.password
         
-        console.log('index')
-        console.log(room, question, action, pass)
+        // console.log('index')
+        // console.log(room, question, action, pass)
 
         //verifica senha
         const db = await Database()
@@ -28,6 +28,7 @@ module.exports = {
             }
         } else {
             res.render('passincorrect', {roomId: room})
+            // res.render(`/room/${room}`)
         }
 
         await db.close()
