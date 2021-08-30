@@ -70,7 +70,7 @@
                     <h2 class="scr-only">Perguntas da Comunidade</h2>
 
                     <div class="questions">
-                        <% if (!isQuestions) { %>
+                        <% if ((!isQuestions) && (questionsRead.length ==0)) { %>
                             <%- include('parts/no-question') %>
                         <% } %>
                         

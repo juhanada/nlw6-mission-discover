@@ -71,7 +71,10 @@
     line-height: 2.4rem;
     
     padding: 1.3rem 3.2rem;
-    margin-left: .8rem;
+}
+
+#entrar {
+    margin-left: 0;
 }
 
 .modal .button.grey{
