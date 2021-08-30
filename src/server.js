@@ -25,5 +25,5 @@ server.use(express.urlencoded({extended: true}))
 server.use(route);
 
 // configurando porta
-server.listen(3000, () => console.log('RODANDO'))
+server.listen(3000, () => console.log('RODANDO em localhost:3000'))
 
